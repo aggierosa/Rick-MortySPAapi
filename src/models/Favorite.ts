@@ -1,4 +1,12 @@
-import { Entity, Column, PrimaryColumn, OneToOne, JoinColumn } from "typeorm";
+import {
+  Entity,
+  Column,
+  PrimaryColumn,
+  OneToOne,
+  JoinColumn,
+  OneToMany,
+  ManyToOne,
+} from "typeorm";
 import { User } from "./User";
 import { v4 as uuid } from "uuid";
 
@@ -13,8 +21,8 @@ export class FavoriteList {
   @Column()
   photourl: string;
 
-  @OneToOne(() => User)
-  @JoinColumn()
+  @ManyToOne((type) => User, (user) => user.favorites)
+  @JoinColumn({ name: "categoryId" })
   user: User;
 
   constructor() {

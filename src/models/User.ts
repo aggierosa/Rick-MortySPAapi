@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
+import { FavoriteList } from "./Favorite";
+import { Entity, Column, PrimaryColumn, OneToMany } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity()
@@ -14,6 +15,9 @@ export class User {
 
   @Column()
   created_on: Date;
+
+  @OneToMany((type) => FavoriteList, (favorite) => favorite.user)
+  favorites: FavoriteList[];
 
   constructor() {
     if (!this.id) {

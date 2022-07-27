@@ -14,15 +14,9 @@ const createFavoriteCharacterService = async (
 
   const favoritesRepo = AppDataSource.getRepository(FavoriteList);
 
-  const existingFavorite = await favoritesRepo.find({
-    relations: ["user"],
-    where: {
-      user: {
-        id: userId,
-      },
-      name: name,
-    },
-  });
+  const favorites = await favoritesRepo.find();
+
+  const existingFavorite = favorites.find((favorite) => favorite.name === name);
 
   console.log(existingFavorite);
 
