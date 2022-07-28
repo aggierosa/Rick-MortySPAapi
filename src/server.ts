@@ -6,13 +6,15 @@ import { AppDataSource } from "./data-source";
     console.error("Error during initialization", err)
   );
 
-   
-
   const swaggerUi = require("swagger-ui-express");
   const swaggerFile = require("../swagger_output.json");
-  const cors = require('cors')
+  const cors = require("cors");
+  var corsOptions = {
+    origin: "https://sparmapi.herokuapp.com",
+  };
 
-  app.use(cors())
+  app.use(cors(corsOptions));
+
   app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
   app.listen(process.env.PORT || 3000, () => {
