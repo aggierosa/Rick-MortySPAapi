@@ -9,7 +9,7 @@ import authCheckMiddleware from "../middlewares/authCheckMiddleWare";
 
 const userRouter = Router();
 
-userRouter.post("/", createUserController);
+userRouter.post("", createUserController);
 userRouter.post("/login", loginUserController);
 
 userRouter.get("/:userId", authCheckMiddleware, seeProfileController);

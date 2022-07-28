@@ -5,11 +5,9 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "localhost:3000",
+  "host": "sparmapi.herokuapp.com",
   "basePath": "/",
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/favorites/{userId}": {
       "post": {
@@ -23,6 +21,13 @@
         "responses": {}
       },
       "delete": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/users/": {
+      "post": {
         "description": "",
         "parameters": [],
         "responses": {}
