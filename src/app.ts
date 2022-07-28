@@ -8,7 +8,11 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+var corsOptions = {
+  origin: "https://sparmapi.herokuapp.com",
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
