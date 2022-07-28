@@ -9,7 +9,7 @@ import cors from "cors";
 const app = express();
 
 var corsOptions = {
-  origin: "https://sparmapi.herokuapp.com",
+  origin: "https://rmspaapi.herokuapp.com",
 };
 
 app.all("/", function (req, res, next) {
