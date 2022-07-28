@@ -6,9 +6,13 @@ import { AppDataSource } from "./data-source";
     console.error("Error during initialization", err)
   );
 
+   
+
   const swaggerUi = require("swagger-ui-express");
   const swaggerFile = require("../swagger_output.json");
+  const cors = require('cors')
 
+  app.use(cors())
   app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
   app.listen(process.env.PORT || 3000, () => {
