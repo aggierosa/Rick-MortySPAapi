@@ -8,12 +8,12 @@ import { AppDataSource } from "./data-source";
 
   // const swaggerUi = require("swagger-ui-express");
   // const swaggerFile = require("../swagger_output.json");
-  const cors = require("cors");
-  var corsOptions = {
-    origin: "https://sparmapi.herokuapp.com",
-  };
+  // const cors = require("cors");
+  // var corsOptions = {
+  //   origin: "https://sparmapi.herokuapp.com",
+  // };
 
-  app.use(cors(corsOptions));
+  // app.use(cors(corsOptions));
 
   // app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 

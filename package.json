@@ -8,8 +8,7 @@
     "start": "node dist/server.js",
     "typeorm": "typeorm-ts-node-commonjs",
     "build": "tsc",
-    "test": "jest",
-    "swagger-autogen": "node swagger.js"
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -24,8 +23,6 @@
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.10",
     "supertest": "^6.2.4",
-    "swagger-autogen": "^2.21.3",
-    "swagger-ui-express": "^4.1.4",
     "ts-jest": "^28.0.7",
     "typeorm": "^0.3.7",
     "uuid": "^8.3.2"
